@@ -3,4 +3,4 @@ Fetches the location of the IP address that requested to nginx web server (if th
 
 Currently in development. Detailed documentation is going to be done on production phase.
 
-If you wish, feel free to test. Just let me know if you encounter any issue :)
+If you wish, feel free to test. Just let me know if you encounter any issues :)

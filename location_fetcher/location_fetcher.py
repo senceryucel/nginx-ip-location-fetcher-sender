@@ -11,7 +11,8 @@ class LocationFetcher:
         for c, field in enumerate(self.generated_fields):
             if c == len(self.generated_fields) - 1:
                 self.fields += field
-            self.fields += f"{field},"
+            else:
+                self.fields += f"{field},"
 
 
     def fetch_location(self, ip):

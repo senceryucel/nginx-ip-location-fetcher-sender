@@ -1,0 +1,40 @@
+{
+    "ip_fetcher":{
+        "generated_fields":{
+            "status":1,
+            "message":1,
+            "continent":1,
+            "continentCode":0,
+            "country":0,
+            "countryCode":1,
+            "region":1,
+            "regionName":1,
+            "city":1,
+            "district":1,
+            "zip":1,
+            "lat":1,
+            "lon":1,
+            "timezone":1,
+            "offset":0,
+            "currency":0,
+            "isp":1,
+            "org":1,
+            "as":1,
+            "asname":0,
+            "reverse":0,
+            "mobile":1,
+            "proxy":1,
+            "hosting":0,
+            "query":0
+        }
+    },
+
+    "file_watcher":{
+        "temp":"dummy"
+    },
+
+    "gmail_sender":{
+        "mail_from":"me",
+        "mail_to":"mail_to@gmail.com"
+    }
+    }

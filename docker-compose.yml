@@ -1,0 +1,9 @@
+version: '3'
+services:
+  test:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    privileged: true
+    volumes:
+      - /miscellaneous/fetch_and_send:/app

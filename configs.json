@@ -1,4 +1,7 @@
 {
+    "general":{
+        "wanted_country":"TR"
+    },
     "ip_fetcher":{
         "generated_fields":{
             "status":1,
@@ -37,4 +40,4 @@
         "mail_from":"me",
         "mail_to":"mail_to@gmail.com"
     }
-    }
+}

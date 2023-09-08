@@ -13,6 +13,7 @@ class GmailSender:
         self.mail_from = configs["mail_from"]
         self.mail_to = configs["mail_to"]
 
+    # 
     def auth(self):
         if os.path.exists('gmail_sender/token.json'):
             creds = Credentials.from_authorized_user_file('gmail_sender/token.json', self.SCOPES)
@@ -31,7 +32,7 @@ class GmailSender:
         creds = self.auth()    
         service = build('gmail', 'v1', credentials=creds)
         message = self.create_message(self.mail_from, self.mail_to, message_subject, message)
-
+        
         try:
             message = (service.users().messages().send(userId='me', body=message)
                     .execute())

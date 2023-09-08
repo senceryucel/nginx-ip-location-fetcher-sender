@@ -9,16 +9,16 @@
 This tool has been designed and tested for Nginx Web Servers. However, it is possible to use it with other web servers like Apache with minor modifications.
 
 <div style="display: flex; justify-content: center; align-items: center;">
-  <a href="images/example1.png"><img src="images/example1.png" width="" height="" style="margin-right: 20px;"></a>
-    <a href="images/example2.png"><img src="images/example2.png" width="" height="" style="margin-left: 20px;"></a>
+  <a href="images/example1.png"><img src="images/example1.png" width="295" height="350" style="margin-right: 20px;"></a>
+    <a href="images/example2.png"><img src="images/example2.png" width="295" height="350" style="margin-left: 20px;"></a>
 </div>
 
 
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
-  <a href="https://nginx.org/en/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nginx_logo.svg/1200px-Nginx_logo.svg.png" width="400" height="82" style="margin-right: 20px;"></a>
-  <a href="https://developers.google.com/gmail/api/quickstart/python"><img src="https://www.google.com/gmail/about/static/images/logo-gmail.png?cache=1adba63" width="200" height="200"></a>
+  <a href="https://nginx.org/en/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nginx_logo.svg/1200px-Nginx_logo.svg.png" width="600" height="123" style="margin-right: 20px;"></a>
+  <a href="https://developers.google.com/gmail/api/quickstart/python"><img src="https://www.google.com/gmail/about/static/images/logo-gmail.png?cache=1adba63" width="300" height="300"></a>
 </div>
 
 

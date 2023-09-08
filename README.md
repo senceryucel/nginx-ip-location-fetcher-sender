@@ -15,10 +15,9 @@ This tool has been designed and tested for Nginx Web Servers. However, it is pos
 
 
 
-
 <div style="display: flex; justify-content: center; align-items: center;">
-  <a href="https://nginx.org/en/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nginx_logo.svg/1200px-Nginx_logo.svg.png" width="600" height="123" style="margin-right: 20px;"></a>
-  <a href="https://developers.google.com/gmail/api/quickstart/python"><img src="https://www.google.com/gmail/about/static/images/logo-gmail.png?cache=1adba63" width="300" height="300"></a>
+  <a href="https://nginx.org/en/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nginx_logo.svg/1200px-Nginx_logo.svg.png" width="600" height="102.5" style="margin-right: 20px;"></a>
+  <a href="https://developers.google.com/gmail/api/quickstart/python"><img src="https://www.google.com/gmail/about/static/images/logo-gmail.png?cache=1adba63" width="250" height="250"></a>
 </div>
 
 

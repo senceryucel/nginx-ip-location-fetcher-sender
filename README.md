@@ -9,8 +9,8 @@
 This tool has been designed and tested for Nginx Web Servers. However, it is possible to use it with other web servers like Apache with minor modifications.
 
 <div style="display: flex; justify-content: center; align-items: center;">
-  <a href="images/example1.png"><img src="images/example1.png" width="295" height="350" style="margin-right: 20px;"></a>
-    <a href="images/example2.png"><img src="images/example2.png" width="295" height="350" style="margin-left: 20px;"></a>
+  <a href="images/example1.png"><img src="images/example1.png" width="370" height="438" style="margin-right: 20px;"></a>
+    <a href="images/example2.png"><img src="images/example2.png" width="370" height="438" style="margin-left: 20px;"></a>
 </div>
 
 

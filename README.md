@@ -20,11 +20,13 @@ This tool has been designed and tested for Nginx Web Servers. However, it is pos
   <a href="https://developers.google.com/gmail/api/quickstart/python"><img src="https://www.google.com/gmail/about/static/images/logo-gmail.png?cache=1adba63" width="200" height="200"></a>
 </div>
 
+<br><br>
 
+Welcome to the Location Fetcher & Mail Notifier for Nginx! This tool is designed to fetch the location of the IP address that requests your Nginx web server. It is designed to work in conjunction with a specific regex pattern, and once a matching request is found, it extracts the client's IP address, fetches the location details, and sends this information via Gmail. This can be incredibly useful for various web applications and services to track the geographical origin of incoming requests.
 
-Welcome to the IP Location Finder project for Nginx Web Server! This tool is designed to fetch the location of the IP address that requests your Nginx web server. It is designed to work in conjunction with a specific regex pattern, and once a matching request is found, it extracts the client's IP address, fetches the location details, and sends this information via Gmail. This can be incredibly useful for various web applications and services to track the geographical origin of incoming requests.
+Please note that this project is currently in development. However, you are welcome to test the tool, and your feedback is highly appreciated. If you encounter any issues or have suggestions, please let me know!
 
-Please note that this project is currently in development, and detailed documentation will be provided during the production phase. However, you are welcome to test the tool, and your feedback is highly appreciated. If you encounter any issues or have suggestions, please let us know!
+You can reach me via opening an issue or directly sending an email to sencery99@gmail.com
 
 ## Table of Contents
 
@@ -101,9 +103,27 @@ Before using this tool, make sure you have the following prerequisites met:
                     '"$request" $status $body_bytes_sent '
                     '"$http_referer" "$http_user_agent"';
     ```
-    Do not forget to set your log_format to your server configuration in the server block. Below is an example of the server block:
+    Do not forget to set your log_format to your server configuration in the server block. File's default location is /etc/nginx/sites-available/your_site. Below is an example of the configuration:
 
     ```bash
+    server {
+        listen 80;
+        listen [::]:80;
+        server_name your_domain.com www.your_domain.com;
+        return 302 https://$server_name$request_uri;
+    }
+    server {
+        listen 443 ssl http2;
+        listen [::]:443 ssl http2;
+        server_name your_domain.com www.your_domain.com;
+        ssl_certificate /etc/ssl/your_domain/fullchain.pem;
+        ssl_certificate_key /etc/ssl/your_domain/privkey.pem;
+        
+        ...
+        
+        access_log /var/log/nginx/access.log for_ssl;
+    ```
+
 ## Usage
 
 If you have followed the instructions in the [Installation - Configuration](#installation---configuration) section, you can start the tool:
@@ -131,7 +151,7 @@ Contributions are always welcome! Please feel free to open an issue or a pull re
 
 This project is licensed with GNU GENERAL PUBLIC LICENSE. For more information, please refer to the [LICENSE](LICENSE) file.
 
-<br><br>
+<br>
 
 ***
 ###### Sencer Yucel, 2023

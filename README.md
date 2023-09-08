@@ -17,7 +17,7 @@ This tool has been designed and tested for Nginx Web Servers. However, it is pos
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <a href="https://nginx.org/en/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nginx_logo.svg/1200px-Nginx_logo.svg.png" width="600" height="102.5" style="margin-right: 20px;"></a>
-  <a href="https://developers.google.com/gmail/api/quickstart/python"><img src="https://www.google.com/gmail/about/static/images/logo-gmail.png?cache=1adba63" width="250" height="250"></a>
+  <a href="https://developers.google.com/gmail/api/quickstart/python"><img src="https://www.google.com/gmail/about/static/images/logo-gmail.png?cache=1adba63" width="200" height="200"></a>
 </div>
 
 
@@ -89,7 +89,7 @@ Before using this tool, make sure you have the following prerequisites met:
 6. Nginx Configuration: You need to configure your Nginx web server to log requests to the access.log file. Default Nginx log configuration is in the /etc/nginx/nginx.conf file. If you have modified your configuration before, you have to go back to the default configuration. Below is the default configuration:
 
     ```bash
-    log_format combined '$remote_addr - $remote_user [$time_local] '
+    log_format default '$remote_addr - $remote_user [$time_local] '
                     '"$request" $status $body_bytes_sent '
                     '"$http_referer" "$http_user_agent"';    
     ```
@@ -97,11 +97,13 @@ Before using this tool, make sure you have the following prerequisites met:
     If your Nginx server has an SSL certificate, you will need to log the client's IP instead of your SSL provider's IP. You can do this by changing $remote_addr to $http_x_forwarded_for in the log_format configuration. Below is an example of the modified configuration:
 
     ```bash
-    log_format combined '$http_x_forwarded_for - $remote_user [$time_local] '
+    log_format for_ssl '$http_x_forwarded_for - $remote_user [$time_local] '
                     '"$request" $status $body_bytes_sent '
                     '"$http_referer" "$http_user_agent"';
     ```
+    Do not forget to set your log_format to your server configuration in the server block. Below is an example of the server block:
 
+    ```bash
 ## Usage
 
 If you have followed the instructions in the [Installation - Configuration](#installation---configuration) section, you can start the tool:

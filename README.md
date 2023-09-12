@@ -26,12 +26,20 @@ Welcome to the Location Fetcher & Mail Notifier for Nginx! This tool is designed
 
 Please note that this project is currently in development. However, you are welcome to test the tool, and your feedback is highly appreciated. If you encounter any issues or have suggestions, please let me know!
 
-You can reach me via opening an issue or directly sending an email to sencery99@gmail.com
+You can reach me via opening an issue or directly sending an email to sencer0611@gmail.com
 
 
-TODO: Gmail API integration steps is going to be added to README
-TODO: Servers with SSL section is going to be extended in a very detailed way
-TODO: Tests for bug fixing
+***
+#### TODO
+
+Gmail API integration steps is going to be added to README &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:red">High</span>
+
+[Servers with SSL section](#installation---configuration) is going to be extended in a very detailed way &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:orange">Medium</span>
+
+Some further regexes are going to be added to examples &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:orange">Medium</span>
+
+Tests for bug fixing &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:green">Low</span>
+***
 
 ## Table of Contents
 
@@ -56,6 +64,7 @@ Before using this tool, make sure you have the following prerequisites met:
    ```bash
    pip install -r requirements.txt
    ```
+
 
 ## Installation - Configuration
 
@@ -100,7 +109,7 @@ Before using this tool, make sure you have the following prerequisites met:
                     '"$request" $status $body_bytes_sent '
                     '"$http_referer" "$http_user_agent"';    
     ```
-    
+
     If your Nginx server has an SSL certificate, you will need to log the client's IP instead of your SSL provider's IP. You can do this by changing $remote_addr to $http_x_forwarded_for in the log_format configuration. Below is an example of the modified configuration:
 
     ```bash
@@ -127,6 +136,9 @@ Before using this tool, make sure you have the following prerequisites met:
         ...
         
         access_log /var/log/nginx/access.log for_ssl;
+
+        ...
+    }
     ```
 
 ## Usage

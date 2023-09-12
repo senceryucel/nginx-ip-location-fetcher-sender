@@ -28,6 +28,11 @@ Please note that this project is currently in development. However, you are welc
 
 You can reach me via opening an issue or directly sending an email to sencery99@gmail.com
 
+
+TODO: Gmail API integration steps is going to be added to README
+TODO: Servers with SSL section is going to be extended in a very detailed way
+TODO: Tests for bug fixing
+
 ## Table of Contents
 
 - [Getting Started](#getting-started)

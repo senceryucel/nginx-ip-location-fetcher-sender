@@ -80,12 +80,14 @@ Before using this tool, make sure you have the following prerequisites met:
     ```
 
 3. Link the access.log file to the project directory (do not forget to replace the path with your own access.log file's path):
+  
+    IMPORTANT: If you are going to dockerize the tool and run it in a container, linking the log file WILL NOT work. You will need to change the Nginx configuration file (located at ```/etc/nginx/sites-available/yoursite``` by default) to log to the folder where the repo is located.
 
     ```bash
     ln -s /var/log/nginx/access.log access.log
     ```
 
-4. Replace the token.json file with your own Gmail API token file. You can follow the instructions [here](https://developers.google.com/gmail/api/quickstart/python) to create your own token file.
+4. Replace the token.json file with your own Gmail API token file. You can follow the instructions [here](https://developers.google.com/gmail/api/quickstart/python) to create your own token file. Do not forget to create your token in ```send``` mode (set the SCOPE variable in the guide as gmail.send).
 
 5. Modify the configs.json file to match your own configuration. Below is a brief explanation of the fields:
 

@@ -1,7 +1,7 @@
 {
     "general":{
         "wanted_country":"TR",
-        "limit_to_send_mail":50
+        "limit_to_send_mail":100
     },
     "ip_fetcher":{
         "generated_fields":{
@@ -29,12 +29,12 @@
             "mobile":1,
             "proxy":1,
             "hosting":0,
-            "query":0
+            "query":1
         }
     },
 
     "file_watcher":{
-        "request_regex":"(\\d+\\.\\d+\\.\\d+\\.\\d+) - - \\[(.*?)\\] \"GET .*\" 200 \\d+ \".*\" \"(.*)\""
+        "dummy":"placeholder"
     },
 
     "gmail_sender":{

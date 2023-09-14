@@ -21,7 +21,7 @@ class LocationFetcher:
     def fetch_location(self, ip):
         resp = requests.get(f"http://ip-api.com/json/{ip}?fields={self.fields}")
         
-        # If request is not successful, it returns an empty list and throws below exception
+        # If request is not successful, it returns an empty list and throws a json exception
         try:
             data = json.loads(resp.content.decode())
         except json.decoder.JSONDecodeError:

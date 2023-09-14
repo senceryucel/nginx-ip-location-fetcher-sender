@@ -13,13 +13,13 @@ class GmailSender:
         self.mail_from = configs["mail_from"]
         self.mail_to = configs["mail_to"]
 
-    # 
+    # Authorizing
     def auth(self):
         if os.path.exists('gmail_sender/token.json'):
             creds = Credentials.from_authorized_user_file('gmail_sender/token.json', self.SCOPES)
             return creds
         
-
+    # Creating mail content
     def create_message(self, sender, to, subject, message_text):
         message = MIMEText(message_text)
         message['to'] = to
@@ -28,6 +28,7 @@ class GmailSender:
         return {'raw': base64.urlsafe_b64encode(message.as_string().encode()).decode()}
 
 
+    # Sending the mail
     def send_message(self, message_subject, message):
         creds = self.auth()    
         service = build('gmail', 'v1', credentials=creds)
@@ -36,6 +37,7 @@ class GmailSender:
         try:
             message = (service.users().messages().send(userId='me', body=message)
                     .execute())
+            print(f"-----Mail sent to {self.mail_to}-----")
             return message
         except Exception as error:
             print(error)

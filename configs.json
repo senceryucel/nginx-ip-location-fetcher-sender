@@ -33,10 +33,6 @@
         }
     },
 
-    "file_watcher":{
-        "dummy":"placeholder"
-    },
-
     "gmail_sender":{
         "mail_from":"me",
         "mail_to":"mail_to@gmail.com"

@@ -1,7 +1,7 @@
 import time, re
 class FileWatcher:
     # TODO: config options
-    def __init__(self, configs) -> None:
+    def __init__(self) -> None:
         self.logfile = open('new_access.log', "r")
 
         # Going to the end of the file

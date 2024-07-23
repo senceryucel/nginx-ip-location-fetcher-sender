@@ -11,11 +11,10 @@ def main():
     wanted_country = configs["general"]["wanted_country"]
     limit = configs["general"]["limit_to_send_mail"]
 
-    file_watcher_config = configs["file_watcher"]
     ip_fetcher_config = configs["ip_fetcher"]
     gmail_sender_config = configs["gmail_sender"]
 
-    _file_watcher = file_watcher.FileWatcher(configs=file_watcher_config)
+    _file_watcher = file_watcher.FileWatcher()
     _location_fetcher = location_fetcher.LocationFetcher(configs=ip_fetcher_config)
     _gmail_sender = gmail_sender.GmailSender(configs=gmail_sender_config)
     
